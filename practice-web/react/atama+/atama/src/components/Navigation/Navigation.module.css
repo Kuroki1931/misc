@@ -1,0 +1,65 @@
+.Container {
+  background-color: #f2f2f2;
+}
+
+.Links {
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid #dbeaec;
+}
+
+a {
+  color: #0095aa;
+}
+
+.NavigateTitle {
+  font-size: 28px;
+  display: block;
+  padding: 30px 0;
+  border-bottom: 1px solid #dbeaec;
+  transition: 1s;
+}
+
+.MoreInfo {
+  display: inline-block;
+  border-bottom: 1px solid #0095aa;
+  background-color: #0095aa;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 5px 50px;
+  position: relative;
+
+  transition: background-color 0.5s;
+}
+
+.MoreInfo::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0c1";
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(0%, -50%);
+}
+
+.MoreInfo:hover {
+  cursor: pointer;
+  background-color: #2f4f4f;
+  transition: 0.5s;
+}
+
+.iconFB {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  background-image: url("https://i.pinimg.com/originals/b7/63/69/b763699fd1fa3bfb374442593ae642e1.png");
+}
+
+.NavigateTitle:hover,
+.Links:hover {
+  color: hsl(187, 63%, 61%);
+  transition: 0.5s;
+}

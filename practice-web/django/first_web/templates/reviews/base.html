@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <title>いろんなお店の口コミサイト</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body{
+            color: #333;
+        }
+
+        body > header{
+            font-size: 40px;
+            background-color: #000;
+            color: #fff;
+            padding: 0 30px;
+        }
+
+        main{
+            margin-top: 20px;
+            padding: 0 30px;
+        }
+
+        main > h1{
+            margin-bottom: 20px;
+        }
+
+        main > article{
+            padding: 0 30px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<header>いろんなお店の口コミサイト</header>
+<main>
+    {% block content %}{% endblock %}
+</main>
+</body>
+</html>
+
+
+
+

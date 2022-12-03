@@ -1,0 +1,75 @@
+.head_icon{
+    padding-top: 100px;
+    width: 100%;
+}
+
+@media (min-width: 1000px) {
+    .head_font {
+        position: absolute;
+        top:40%;
+        left: 10%;
+        color: #fff;
+        font-size: 60px;
+        font-weight: 200;
+    }
+}
+
+@media (max-width: 1000px) {
+    .head_font {
+        border-bottom: solid 2px black;
+        margin: 10px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .body_all {
+        margin: 40px 100px 20px 100px;
+    }
+}@media (max-width: 1000px) {
+    .body_all {
+        margin: 40px 0px 20px 0px;
+    }
+}
+
+.main_box {
+    margin: 50px 50px 20px 50px;
+    text-align: center; 
+}
+
+.service{
+    margin: 100px 0 40px 0;
+}
+
+.each_head {
+    font-size: 30px;
+
+}
+
+.report {
+    margin: 40px 0 40px 0;
+}
+
+.report_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.each_report_box {
+    width: 330px;
+    margin: 2px;  
+}
+
+.each_report_head {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.question{
+    margin: 40px 0 100px 0;
+}
+
+.except {
+    list-style: none;
+}

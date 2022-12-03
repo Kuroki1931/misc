@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <title>動画アップロード</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body{
+            width: 960px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .video {
+            width: 160px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        img, video{
+            width: 100%;
+            height: auto;
+        }
+
+
+    </style>
+</head>
+<body>
+    <p>
+        <a href="{% url 'videos:video_list' %}">動画一覧</a>
+        <a href="{% url 'videos:video_create' %}">アップロード</a>
+    </p>
+    {% block content %}{% endblock %}
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,67 @@
+import React, { createContext, useState, useEffect } from 'react'
+import { withCookies } from 'react-cookie'
+import axios from 'axios'
+
+export const ApiContext = createContext()
+
+const ApiContextProvider = (props) => {
+
+    const token = props.cookies.get("current-token");
+    const [profile, setProfile] = useState([]);
+    const [profiles, setProfiles] = useState([]);
+    const [editedProfile, setEditedProfile] = useState({ id: "", nickName: "" });
+    const [askList, setAskList] = useState([]);
+    const [askListFull, setAskListFull] = useState([]);
+    const [inbox, setInbox] = useState([]);
+    const [cover, setCover] = useState([]);
+
+    useEffect(() => {
+        const getMyProfile = async () => {
+          try {
+            const resmy = await axios.get(
+              "http://localhost:8000/user/myprofile/",
+              {
+                headers: {
+                  Authorization: `Token ${token}`,
+                },
+              }
+            );
+            resmy.data[0] && setProfile(resmy.data[0]);
+          } catch {
+            console.log("error");
+          }
+        };
+        getMyProfile();
+    }, [token, profile.id]);
+
+    const newRequestFriend = async (askData) => {
+        try {
+          const res = await axios.post(
+            `http://localhost:8000/user/approval/`,
+            askData,
+            {
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Token ${token}`,
+              },
+            }
+          );
+          setAskListFull([...askListFull, res.data]);
+        } catch {
+          console.log("error");
+        }
+    };
+
+    return (
+      <ApiContext.Provider
+        value={{
+        profile,
+        askListFull,
+        }}
+      >
+        {props.children}
+      </ApiContext.Provider>
+    )
+}
+
+export default withCookies(ApiContextProvider)

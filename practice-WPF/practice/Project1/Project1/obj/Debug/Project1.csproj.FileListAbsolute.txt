@@ -1,0 +1,7 @@
+C:\Users\kurokiso\Desktop\programming\WPF\Project1\Project1\obj\Debug\Project1.csproj.AssemblyReference.cache
+C:\Users\kurokiso\Desktop\programming\WPF\Project1\Project1\obj\Debug\Project1.csproj.CoreCompileInputs.cache
+C:\Users\kurokiso\Desktop\programming\WPF\Project1\Project1\bin\Debug\Project1.exe.config
+C:\Users\kurokiso\Desktop\programming\WPF\Project1\Project1\bin\Debug\Project1.exe
+C:\Users\kurokiso\Desktop\programming\WPF\Project1\Project1\bin\Debug\Project1.pdb
+C:\Users\kurokiso\Desktop\programming\WPF\Project1\Project1\obj\Debug\Project1.exe
+C:\Users\kurokiso\Desktop\programming\WPF\Project1\Project1\obj\Debug\Project1.pdb

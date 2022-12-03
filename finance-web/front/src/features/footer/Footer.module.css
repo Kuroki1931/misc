@@ -1,0 +1,36 @@
+.all {
+  background-color: #fff;
+}
+
+.footer_box {
+  display: flex;
+  justify-content:space-between;
+  margin: auto;
+  width: 360px;
+}
+
+.logo {
+  width: 100px;
+  margin: 5px;
+}
+
+.each_box {
+  margin: 10px;
+}
+
+.top_font {
+border-bottom: solid 1px;
+font-size: 16px;
+}
+
+.link_font {
+  font-size: 12px;
+}
+
+.link_font:hover {
+  color: #666666;
+  background-color: #f0f0f0;
+  transition: background-color 1s,
+}
+
+

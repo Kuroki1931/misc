@@ -1,0 +1,63 @@
+.header_box {
+  height: 50px;
+  background-color: black;
+  display: flex;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.logo {
+  width: 200px;
+  margin: 5px;
+}
+
+.link {
+  margin-left: 10px;
+  color: #fff;
+}
+
+.intern_head {
+  border-bottom: solid 3px #e0e0e0;
+  margin: 20px;
+  width: 80%;
+  font-size: 30px;
+}
+
+.intern_ul {
+  margin: 20px;
+}
+
+.intern_li {
+  line-height: 1.5;
+  padding: 0.5em 0;
+  list-style-type: none !important; /*ポチ消す*/
+}
+
+.intern_li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0a4";
+  position: absolute;
+  left: 2em; /*左端からのアイコンまで*/
+  color: #21b384; /*アイコン色*/
+}
+
+.call_info {
+  margin: 40px;
+}
+
+.call_box {
+  display: flex;
+  text-align: center;
+  margin: 20px;
+}
+
+.call_tag {
+  flex-grow: 100;
+  margin: auto;
+}
+
+.call_logo {
+  flex-grow: 100;
+  width: 1px;
+  margin: 10px;
+}

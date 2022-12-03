@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>Kuroki's Profile</header>
+
+    <nav>
+        <a href="{% url 'myprofile:top' %}">TOP</a>
+        <a href="{% url 'myprofile:resume' %}">Resume</a>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint"content="width=device-width, initial-scale=1">
+    <title>Hogeブログ</title>
+    <link rel='stylesheet'  href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css'>
+    <scrip defer src='https://use.fontawesome.com/releases/v5.3.1/js/all.js'></scrip>
+
+</head>
+<body>
+<header class='hero is-primary'>
+    <div class='hero-body'>
+        <div class='container'>
+            <h1 class="title"><a href="{% url 'blog:post_list' %}" class='has-text-white'>Hogeブログ</a></h1>
+            <h2 class="subtitle">色々な記事を書いています。</h2>
+        </div>
+    </div>
+</header>
+
+<div class="section">
+    <div class="container">
+        <div class="columns">
+            <main class="column is-7">
+                {% block content %}{% endblock %}
+            </main>
+            <aside class="column is-offset-1 is-4">
+                <!--サイドバーは後で作る-->
+            </aside>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

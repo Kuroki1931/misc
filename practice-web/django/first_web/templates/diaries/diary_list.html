@@ -1,0 +1,12 @@
+{% extends 'diaries/base.html' %}
+
+{% block content %}
+    {% for diary in diary_list %}
+        <article>
+            <time>{{diary.created_at}}</time>-<span class='category'>{{diary.category}}</span><br>
+            <p>{{diary.text}}</p>
+        </article>
+    {% endfor %}
+{% endblock %}
+
+

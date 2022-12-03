@@ -1,0 +1,12 @@
+{% extends 'reviews/base.html' %}
+
+{% block content %}
+<form action=""  method="POST">
+    {{ form.as_p }}
+    <p>{{ form.instance.created_at }}</p>
+    {% csrf_token %}
+    <button type="submit">送信</button>
+</form>
+{% endblock %}
+
+

@@ -1,0 +1,117 @@
+.Header {
+  height: 60px;
+  width: 100%;
+  border-bottom: 3px solid #0095aa;
+  vertical-align: middle;
+  position: relative;
+  position: fixed;
+  background-color: white;
+  z-index: 100;
+}
+
+.Logo {
+  z-index: 110;
+  height: 70%;
+  width: 100px;
+  margin: 10px auto 0;
+  display: inline-block;
+  background-size: cover;
+  background-image: url("../../assets/images/atama+.png");
+}
+.Tags {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .Logo {
+    position: absolute;
+    left: 30px;
+  }
+  .Icon {
+    display: none;
+  }
+
+  .HeadNav {
+    display: block;
+    font-size: 16px;
+    justify-content: center;
+  }
+
+  .HeadNav a {
+    display: inline-block;
+    color: black;
+    padding: 0px 30px;
+    line-height: 60px;
+    transition: 0.5s;
+  }
+
+  .HeadNav a:hover {
+    color: #0095aa;
+    transition: 0.5s;
+  }
+
+  .Tags {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  .Tags li {
+    display: inline-block;
+  }
+  .Tag {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 0;
+    z-index: 10;
+    transition: 0.5s;
+    animation: toolShow 1s;
+  }
+
+  .Tags:hover .Tag {
+    display: inline-block;
+    animation: tooltipShow 1s;
+  }
+  @keyframes toolShow {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes tooltipShow {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.Icon {
+  color: #0095aa;
+  left: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.Icon:hover {
+  cursor: pointer;
+}
+
+.Open {
+  display: block;
+  overflow-y: scroll;
+}
+
+.Close {
+  display: none;
+}

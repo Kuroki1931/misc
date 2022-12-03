@@ -1,0 +1,7 @@
+{% if name %}{{ name }}さんから{% else %}匿名{% endif %}
+
+{% if category == '1' %}仕事{% elif category == '2' %}サイト内容のお問い合わせ{% endif %}
+
+{{ text }}
+
+{{ email }}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <title>My Diary</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body{
+            color: #333:#333;
+            max-width: 500px;
+            margin: auto;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        body > header{
+            color: #900;
+            font-size: 40px;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        main{
+            border-top: solid 1px #ddd;
+            padding-top: 40px;
+        }
+
+        main > article{
+            border-bottom: solid 1px #ddd;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+        }
+
+        main > article > span.category{
+            color: #900;
+        }
+
+        main > article > time{
+            color: #900;
+        }
+
+    </style>
+</head>
+<body>
+<header>My Diary</header>
+<main>
+    {% block content %}{% endblock %}
+</main>
+</body>
+</html>
+
+
+
+

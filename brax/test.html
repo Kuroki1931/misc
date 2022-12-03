@@ -1,0 +1,28 @@
+
+<html>
+  <head>
+    <title>brax visualizer</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #brax-viewer {
+        margin: 0;
+        padding: 0;
+        height: 480px;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="application/javascript">
+    var system = {"config": {"bodies": [{"name": "Ground", "colliders": [{"plane": {}, "material": {"friction": 1.0, "elasticity": 0.0}}], "inertia": {"x": 1.0, "y": 1.0, "z": 1.0}, "mass": 1.0, "frozen": {"position": {"x": 1.0, "y": 1.0, "z": 1.0}, "rotation": {"x": 1.0, "y": 1.0, "z": 1.0}, "all": true}}, {"name": "Object", "colliders": [{"box": {"halfsize": {"x": 0.5, "y": 0.5, "z": 0.5}}, "material": {"friction": 1.0, "elasticity": 0.0}}], "inertia": {"x": 1.0, "y": 1.0, "z": 1.0}, "mass": 1.0, "frozen": {"position": {"x": 0.0, "y": 0.0, "z": 0.0}, "rotation": {"x": 0.0, "y": 0.0, "z": 0.0}, "all": false}}, {"name": "BallOne", "colliders": [{"rotation": {"x": 120.0, "y": 0.0, "z": 0.0}, "capsule": {"radius": 0.1, "length": 0.0, "end": 0}, "material": {"friction": 1.0, "elasticity": 0.0}}], "inertia": {"x": 5000.035, "y": 10000.723, "z": 10000.723}, "mass": 1.0, "frozen": {"position": {"x": 1.0, "y": 1.0, "z": 1.0}, "rotation": {"x": 1.0, "y": 1.0, "z": 1.0}, "all": true}}, {"name": "Target", "colliders": [{"sphere": {"radius": 0.5}, "material": {"friction": 1.0, "elasticity": 0.0}}], "inertia": {"x": 1.0, "y": 1.0, "z": 1.0}, "frozen": {"position": {"x": 1.0, "y": 1.0, "z": 1.0}, "rotation": {"x": 1.0, "y": 1.0, "z": 1.0}, "all": true}, "mass": 0.0}], "friction": 1.0, "gravity": {"z": -9.8, "x": 0.0, "y": 0.0}, "angularDamping": -0.05, "collideInclude": [{"first": "Ground", "second": "Object"}, {"first": "Ground", "second": "BallOne"}, {"first": "BallOne", "second": "Object"}], "dt": 0.02, "substeps": 4, "frozen": {"all": false}, "dynamicsMode": "pbd", "joints": [], "actuators": [], "forces": [], "elasticity": 0.0, "velocityDamping": 0.0, "baumgarteErp": 0.0, "defaults": [], "colliderCutoff": 0, "meshGeometries": []}, "pos": [[[0.0, 0.0, 0.0], [0.0, 0.0, 1.5], [0.0, 0.0, 0.15000000223517415], [5.0, 0.0, 1.0]]], "rot": [[[1.0, 0.0, 0.0, 0.0], [1.0, 0.0, 0.0, 0.0], [1.0, 0.0, 0.0, 0.0], [1.0, 0.0, 0.0, 0.0]]]};
+    </script>
+    <div id="brax-viewer"></div>
+    <script type="module">
+      import {Viewer} from 'https://cdn.jsdelivr.net/gh/google/brax@v0.0.12/js/viewer.js';
+      const domElement = document.getElementById('brax-viewer');
+      var viewer = new Viewer(domElement, system);
+    </script>
+  </body>
+</html>

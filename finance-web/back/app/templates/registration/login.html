@@ -1,0 +1,10 @@
+{% extends "five/base.html" %}
+{% block content %}
+<h2>Login</h2>
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Login</button>
+</form>
+<p><a href="{% url 'password_reset' %}">Forgot Your Password?</a></p>    # 追加
+{% endblock %}

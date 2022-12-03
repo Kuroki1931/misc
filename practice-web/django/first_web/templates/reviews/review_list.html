@@ -1,0 +1,14 @@
+{% extends 'reviews/base.html' %}
+
+{% block content %}
+    <h1>口コミ一覧</h1>
+    {% for review in review_list %}
+        <article>
+            <h2><a href="{% url 'reviews:review_detail' review.pk %}">{{ review.store_name }}</a></h2>
+            <p>{{ review.get_stars_display }}-{{ review.title }}</p>
+        </article>
+    {% endfor %}
+    <a href="{% url 'reviews:review_create' %}">口コミ作成ページへ</a>
+{% endblock %}
+
+

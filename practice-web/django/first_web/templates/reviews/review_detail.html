@@ -1,0 +1,13 @@
+{% extends 'reviews/base.html' %}
+
+{% block content %}
+        <article>
+            <h1>{{review.store_name}}</h1>
+            <p>{{review.get_stars_display}}-{{review.title}}</p>
+            {{review.text|linebreaks}}
+        </article>
+<a href="{% url 'reviews:review_update' review.pk %}">更新</a>
+<a href="{% url 'reviews:review_delete' review.pk %}">削除</a>
+{% endblock %}
+
+

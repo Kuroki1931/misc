@@ -1,0 +1,45 @@
+.header {
+  background-color: black;
+  color: #fff;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 30px;
+  font-weight: bold;
+}
+
+.head {
+  border-bottom: solid 1px;
+  margin: 30px 10px 40px 10px;
+}
+
+.property_box {
+  margin: 20px;
+}
+
+.table_box {
+  margin: 20px;
+}
+
+.tag_dl {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #ccc;
+  border-top: none;
+  margin-bottom: -20px;
+}
+.tag_dt {
+  background: #ddd;
+  width: 30%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-top: 1px solid #ccc;
+}
+.tag_dd {
+  padding: 10px;
+  margin: 0;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  width: 70%;
+  background: #fff;
+  box-sizing: border-box;
+}
